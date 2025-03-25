@@ -23,22 +23,32 @@ class SearchBox extends React.Component {
         this.input = element;
     };
     render() {
-        return React.createElement(
-            'div',
-            { style: { display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '20px' } },
-            React.createElement('input', {
-                ref: this.setInput,
-                type: 'text',
-                defaultValue: this.props.initialQuery || "",
-                onKeyPress: this.handleKeyPress,
-                style: { padding: '5px', fontSize: '16px', marginBottom: '10px' }
-            }),
-            React.createElement('button', {
-                onClick: this.handleSearch,
-                style: { padding: '5px 10px', fontSize: '16px' }
-            }, 'Search')
+        return (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              marginTop: "20px",
+            }}
+          >
+            <input
+              ref={this.setInput}
+              type="text"
+              defaultValue={this.props.initialQuery || ""}
+              onChange={this.handleKeyPress}
+              style={{ padding: "5px", fontSize: "16px", marginBottom: "10px" }}
+            />
+            <button
+              onClick={this.handleSearch}
+              style={{ padding: "5px 10px", fontSize: "16px" }}
+            >
+              Search
+            </button>
+          </div>
         );
-    }
+      }
 }
 
 export default SearchBox

@@ -9,9 +9,6 @@ class Counter extends React.Component {
     handleButtonClick = (change) => {
         this.value += change;
         console.log(`Updated value: ${this.value}`);
-        if (this.props.onUpdate) {
-            this.props.onUpdate(this.value);
-        }
         this.forceUpdate();
     };
 
