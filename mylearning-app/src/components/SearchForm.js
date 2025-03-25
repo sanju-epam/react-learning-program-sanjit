@@ -19,7 +19,6 @@ class SearchBox extends React.Component {
         }
     };
     setInput = (element) => {
-       
         this.input = element;
     };
     render() {
