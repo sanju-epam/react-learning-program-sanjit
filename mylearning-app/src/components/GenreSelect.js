@@ -18,7 +18,7 @@ class MovieGenres extends React.Component {
     const { genres } = this.props; 
 
     return (
-        <div  style={{ display: "flex", gap: "10px" }}>
+        <div className="horizontal-flex">
         {genres.map((genre) => (
           <button
             key={genre}

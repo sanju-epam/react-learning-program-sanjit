@@ -23,15 +23,7 @@ class SearchBox extends React.Component {
     };
     render() {
         return (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-              marginTop: "20px",
-            }}
-          >
+          <div className='horizontal-flex'>
             <input
               ref={this.setInput}
               type="text"
