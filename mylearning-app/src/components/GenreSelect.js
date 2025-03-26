@@ -22,12 +22,7 @@ class MovieGenres extends React.Component {
         {genres.map((genre) => (
           <button
             key={genre}
-            style={{
-              padding: "10px 15px",
-              backgroundColor: this.selectedGenre === genre ? "#007bff" : "#f0f0f0",
-              color: this.selectedGenre === genre ? "#fff" : "#000",
-              fontWeight: this.selectedGenre === genre ? "bold" : "normal",
-            }}
+            className={this.selectedGenre === genre ? "selected-button" : "button"}
             onClick={() => this.handleGenreSelect(genre)}
           >
             {genre}

@@ -15,7 +15,7 @@ class Counter extends React.Component {
     render() {
         return React.createElement(
             'div',
-            { style: { display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '24px', paddingTop: '20px' } },
+            { className: 'counter' },
             React.createElement('button', { onClick: () => this.handleButtonClick(-1) }, '-'),
             React.createElement('span', { style: { margin: '0 10px' } }, this.value),
             React.createElement('button', { onClick: () => this.handleButtonClick(1) }, '+')

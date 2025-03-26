@@ -7,7 +7,7 @@ class SearchBox extends React.Component {
     }
 
     handleSearch = () => {
-        const inputValue = this.input.value;
+        const inputValue =  document.querySelector(".searchbox").value;
         if (this.props.onSearch) {
             this.props.onSearch(inputValue);
         }
@@ -18,22 +18,19 @@ class SearchBox extends React.Component {
             this.handleSearch();
         }
     };
-    setInput = (element) => {
-        this.input = element;
-    };
+
     render() {
         return (
           <div className='horizontal-flex'>
             <input
-              ref={this.setInput}
+              className="searchbox"
               type="text"
               defaultValue={this.props.initialQuery || ""}
               onChange={this.handleKeyPress}
-              style={{ padding: "5px", fontSize: "16px", marginBottom: "10px" }}
             />
             <button
+            className='button'
               onClick={this.handleSearch}
-              style={{ padding: "5px 10px", fontSize: "16px" }}
             >
               Search
             </button>
