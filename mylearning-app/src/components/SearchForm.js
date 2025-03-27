@@ -26,11 +26,12 @@ class SearchBox extends React.Component {
               className="searchbox"
               type="text"
               defaultValue={this.props.initialQuery || ""}
-              onChange={this.handleKeyPress}
+              onKeyDown={this.handleKeyPress}
             />
             <button
-            className='button'
-              onClick={this.handleSearch}
+                className='button'
+                name='search'
+                onClick={this.handleSearch}
             >
               Search
             </button>
