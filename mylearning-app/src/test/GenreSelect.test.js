@@ -1,10 +1,11 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import MovieGenres from "../components/GenreSelect";
+import {genres} from "../constants/constants"
 
 describe("MovieGenres Component", () => {
   it("renders all genres as buttons", () => {
-    const genres = ["Action", "Comedy", "Drama"];
+
 
     render(<MovieGenres genres={genres} />);
 
@@ -16,7 +17,6 @@ describe("MovieGenres Component", () => {
   });
 
   it("applies 'selected-button' class to the selected genre", () => {
-    const genres = ["Action", "Comedy", "Drama"];
 
     render(<MovieGenres genres={genres} />);
 
@@ -34,7 +34,6 @@ describe("MovieGenres Component", () => {
   });
 
   it("calls the onSelect callback with the selected genre", () => {
-    const genres = ["Action", "Comedy", "Drama"];
     const onSelectMock = jest.fn();
 
     render(<MovieGenres genres={genres} onSelect={onSelectMock} />);
@@ -47,7 +46,6 @@ describe("MovieGenres Component", () => {
   });
 
   it("initializes with the pre-selected genre", () => {
-    const genres = ["Action", "Comedy", "Drama"];
     const selectedGenre = "Comedy";
 
     render(<MovieGenres genres={genres} selectedGenre={selectedGenre} />);
